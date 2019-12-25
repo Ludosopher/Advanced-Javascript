@@ -1,0 +1,36 @@
+.btn-cart {
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.products {
+  width: 550px;
+  margin-top: 20px;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid blueviolet;
+  padding: 10px 0 0;
+}
+.product-item .imgTitlePrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 330px;
+}
+.product-item .imgTitlePrice h3 {
+  color: darkblue;
+  margin: 10px 0;
+  text-align: center;
+}
+.product-item .by-btn {
+  height: 30px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
