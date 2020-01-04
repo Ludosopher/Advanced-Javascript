@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hamburger_calculator</title>
+</head>
+<body>
+<script>
+    'use strict';
+
+    class Hamburger {
+        constructor(size, stuffing, seasoning = 'Null', mayonnaise = 'Null') {
+            this.size = size;
+            this.stuffing = stuffing;
+            this.seasoning = seasoning;
+            this.mayonnaise = mayonnaise;
+            this.totalPrice = 0;
+            this.totalCalorie = 0;
+            this.calcTotalPriceCalorie();
+        }
+
+        calcTotalPriceCalorie() {
+           switch(this.size) {
+               case 'большой':
+                   this.totalPrice += 100;
+                   this.totalCalorie += 40;
+                   break;
+               case 'маленький':
+                   this.totalPrice += 50;
+                   this.totalCalorie += 20;
+                   break;
+           }
+            switch(this.stuffing) {
+                case 'с сыром':
+                    this.totalPrice += 10;
+                    this.totalCalorie += 20;
+                    break;
+                case 'с салатом':
+                    this.totalPrice += 20;
+                    this.totalCalorie += 5;
+                    break;
+                case 'с картофелем':
+                    this.totalPrice += 15;
+                    this.totalCalorie += 10;
+                    break;
+            }
+            if (this.seasoning === 'с приправой') {
+                this.totalPrice += 15;
+                this.totalCalorie += 0;
+            }
+            if (this.mayonnaise === 'с майонезом') {
+                this.totalPrice += 20;
+                this.totalCalorie += 5;
+            }
+            return[this.totalPrice, this.totalCalorie];
+        }
+    }
+
+    const myHamburger = new Hamburger('маленький', 'с салатом');
+    console.log(`Общая калорийность гамбургера: ${myHamburger.totalCalorie} кал, цена: ${myHamburger.totalPrice} руб.`);
+
+</script>
+</body>
+</html>
